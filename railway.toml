@@ -1,0 +1,8 @@
+[build]
+builder = "NIXPACKS"
+buildCommand = "npm install --include=dev && npm run build"
+
+[deploy]
+startCommand = "npm run db:migrate && npm run db:seed && npm start"
+healthcheckPath = "/health"
+healthcheckTimeout = 60
