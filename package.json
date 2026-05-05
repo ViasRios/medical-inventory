@@ -1,0 +1,53 @@
+{
+  "name": "medical-inventory-system",
+  "version": "1.0.0",
+  "description": "Sistema de Gestión de Inventario para Insumos Médicos",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "dev": "ts-node src/index.ts",
+    "test": "mocha --require ts-node/register --require tsconfig-paths/register 'tests/**/*.test.ts' --timeout 10000 --exit",
+    "test:unit": "mocha --require ts-node/register --require tsconfig-paths/register 'tests/unit/**/*.test.ts' --timeout 10000 --exit",
+    "test:integration": "mocha --require ts-node/register --require tsconfig-paths/register 'tests/integration/**/*.test.ts' --timeout 15000 --exit",
+    "db:migrate": "ts-node scripts/migrate.ts",
+    "db:seed": "ts-node scripts/seed.ts"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "pg": "^8.11.3",
+    "sequelize": "^6.35.0",
+    "sequelize-typescript": "^2.1.6",
+    "dotenv": "^16.3.1",
+    "bcryptjs": "^2.4.3",
+    "jsonwebtoken": "^9.0.2",
+    "joi": "^17.11.0",
+    "winston": "^3.11.0",
+    "express-rate-limit": "^7.1.5",
+    "helmet": "^7.1.0",
+    "cors": "^2.8.5",
+    "reflect-metadata": "^0.1.13",
+    "uuid": "^9.0.0",
+    "date-fns": "^2.30.0"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.21",
+    "@types/node": "^20.10.0",
+    "@types/pg": "^8.10.9",
+    "@types/bcryptjs": "^2.4.6",
+    "@types/jsonwebtoken": "^9.0.5",
+    "@types/cors": "^2.8.17",
+    "@types/uuid": "^9.0.7",
+    "@types/mocha": "^10.0.6",
+    "@types/chai": "^4.3.11",
+    "@types/sinon": "^17.0.2",
+    "@types/supertest": "^6.0.2",
+    "typescript": "^5.3.2",
+    "ts-node": "^10.9.2",
+    "mocha": "^10.2.0",
+    "chai": "^4.3.10",
+    "sinon": "^17.0.1",
+    "supertest": "^6.3.3",
+    "tsconfig-paths": "^4.2.0"
+  }
+}
