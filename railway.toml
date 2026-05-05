@@ -1,7 +1,7 @@
 [build]
-buildCommand = "npm install --include=dev && npm run build"
+buildCommand = "rm -rf node_modules && npm install --include=dev && npm run build"
 
 [deploy]
-startCommand = "npm run db:migrate && npm run db:seed && npm start"
+startCommand = "npm start"
 healthcheckPath = "/health"
 healthcheckTimeout = 60
