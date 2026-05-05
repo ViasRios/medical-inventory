@@ -9,9 +9,8 @@
     "dev": "ts-node src/index.ts",
     "test": "mocha --require ts-node/register --require tsconfig-paths/register 'tests/**/*.test.ts' --timeout 10000 --exit",
     "test:unit": "mocha --require ts-node/register --require tsconfig-paths/register 'tests/unit/**/*.test.ts' --timeout 10000 --exit",
-    "test:integration": "mocha --require ts-node/register --require tsconfig-paths/register 'tests/integration/**/*.test.ts' --timeout 15000 --exit",
-    "db:migrate": "ts-node scripts/migrate.ts",
-    "db:seed": "ts-node scripts/seed.ts"
+    "test:integration": "mocha --require ts-node/register --require tsconfig-paths/register 'tests/integration/**/*.test.ts' --timeout 15000 --exit"
+   
   },
   "dependencies": {
     "express": "^4.18.2",
