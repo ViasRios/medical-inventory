@@ -1,5 +1,4 @@
 [build]
-builder = "NIXPACKS"
 buildCommand = "npm install --include=dev && npm run build"
 
 [deploy]
